@@ -1,10 +1,10 @@
-package com.example.whatsapp
+package com.example.whatsapp.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.whatsapp.ui.theme.WhatsAppTheme
+import com.example.whatsapp.core.presentation.designsystem.theme.WhatsAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
