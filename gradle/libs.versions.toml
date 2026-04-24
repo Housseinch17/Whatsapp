@@ -55,9 +55,10 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
-google-firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
-google-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-phone-authentication = { group = "com.google.firebase", name = "firebase-auth" }
+google-firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
+google-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 
 # Room Libraries
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
@@ -72,6 +73,9 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "kotlinKsp" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
 room = { id = "androidx.room", version.ref = "room" }
-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin"}
-google-services = { id = "com.google.gms.google-services", version.ref = "google-services"}
-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics"}
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics" }
+
+[bundles]
+firebase = ["firebase-phone-authentication","google-firebase-crashlytics","google-firebase-analytics"]

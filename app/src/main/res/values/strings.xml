@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WhatsApp</string>
+    <string name="done">Done</string>
+    <string name="phone_number">Phone number</string>
+    <string name="confirm_description">Please confirm your country code and enter your phone number</string>
+    <string name="enter_verification_code">Enter verification code</string>
+    <string name="verify">Verify</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="verification_code_description">Please input the verification code, which you received via SMS.</string>
 </resources>

@@ -1,15 +1,13 @@
 package com.example.whatsapp.core.presentation.designsystem.theme
 
-import android.os.Build
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
 
 private val LightColorScheme = lightColorScheme(
     primary = Primary,
     secondary = Secondary,
+    background = Background
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -26,14 +24,7 @@ private val LightColorScheme = lightColorScheme(
 fun WhatsAppTheme(
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            dynamicLightColorScheme(context)
-        }
-
-        else -> LightColorScheme
-    }
+    val colorScheme = LightColorScheme
 
     MaterialTheme(
         colorScheme = colorScheme,

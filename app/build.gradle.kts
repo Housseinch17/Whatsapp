@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -26,7 +29,17 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    val localProperties = Properties()
+    val localPropertiesFile = rootProject.file("local.properties")
+    if (localPropertiesFile.exists()) {
+        localProperties.load(FileInputStream(localPropertiesFile))
+    }
+
     buildTypes {
+        debug {
+            isMinifyEnabled = false
+            buildConfigField("String","Token","\"${localProperties.getProperty("Token")}\"")
+        }
         release {
             isMinifyEnabled = false
             proguardFiles(
@@ -44,7 +57,9 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
+
 }
 
 room {
@@ -98,10 +113,9 @@ dependencies {
     //Preference DataStore
     implementation(libs.androidx.datastore.preferences)
 
-    //Firebase Bom, Analytics, Crashlytics
+    //Firebase Bom and the Bundle (Analytics, Crashlytics, Phone number Verification)
     implementation(platform(libs.firebase.bom))
-    implementation(libs.google.firebase.analytics)
-    implementation(libs.google.firebase.crashlytics)
+    implementation(libs.bundles.firebase)
 
     //Timber
     implementation(libs.timber)
