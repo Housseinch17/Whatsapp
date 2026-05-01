@@ -1,4 +1,4 @@
-package com.example.whatsapp.feature.authentication
+package com.example.whatsapp.feature.auth.authentication
 
 import com.example.whatsapp.R
 import com.example.whatsapp.core.data.Constants

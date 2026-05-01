@@ -97,6 +97,9 @@ dependencies {
     //compose navigation with type-safe
     implementation(libs.androidx.navigation.compose)
 
+    //Coil
+    implementation(libs.coil.compose)
+
     //hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)

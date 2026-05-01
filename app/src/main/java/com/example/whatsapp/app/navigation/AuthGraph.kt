@@ -5,7 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.example.whatsapp.feature.authentication.AuthenticationRoot
+import com.example.whatsapp.feature.auth.authentication.AuthenticationRoot
 
 fun NavGraphBuilder.authGraph(
     modifier: Modifier = Modifier,
@@ -16,13 +16,13 @@ fun NavGraphBuilder.authGraph(
             AuthenticationRoot(
                 modifier = modifier,
                 navigateToChat = {
-//                    navHostController.navigate(
-//                        NavigationGraphs.ChatGraph
-//                    ) {
-//                        popUpTo(NavigationGraphs.AuthGraph) {
-//                            inclusive = true
-//                        }
-//                    }
+                    navHostController.navigate(
+                        NavigationGraphs.ChatGraph
+                    ) {
+                        popUpTo(NavigationGraphs.AuthGraph) {
+                            inclusive = true
+                        }
+                    }
                 }
             )
         }

@@ -11,3 +11,7 @@ val ColorScheme.blueMagenta: Color
 val ColorScheme.gray3: Color
     @Composable
     get() = Gray3
+
+val ColorScheme.gray: Color
+    @Composable
+    get() = Gray

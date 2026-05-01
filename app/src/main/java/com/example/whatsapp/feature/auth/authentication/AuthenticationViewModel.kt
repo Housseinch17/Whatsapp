@@ -1,4 +1,4 @@
-package com.example.whatsapp.feature.authentication
+package com.example.whatsapp.feature.auth.authentication
 
 import androidx.core.text.isDigitsOnly
 import androidx.lifecycle.ViewModel

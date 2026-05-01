@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.example.whatsapp.feature.authentication
+package com.example.whatsapp.feature.auth.authentication
 
 import android.widget.Toast
 import androidx.compose.foundation.background

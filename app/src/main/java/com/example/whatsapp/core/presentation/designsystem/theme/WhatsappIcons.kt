@@ -42,9 +42,9 @@ object WhatsappIcons {
         @Composable
         get() = ImageVector.vectorResource(R.drawable.dots)
 
-    val Edit: ImageVector
+    val OpenNewChat: ImageVector
         @Composable
-        get() = ImageVector.vectorResource(R.drawable.edit)
+        get() = ImageVector.vectorResource(R.drawable.open_new_chat)
 
     val Read: ImageVector
         @Composable
@@ -62,5 +62,8 @@ object WhatsappIcons {
         @Composable
         get() = ImageVector.vectorResource(R.drawable.voice_record)
 
+    val Selected: ImageVector
+        @Composable
+        get() = ImageVector.vectorResource(R.drawable.selected)
 
 }

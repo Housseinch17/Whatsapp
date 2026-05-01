@@ -13,9 +13,9 @@ fun NavigationRoot(
     NavHost(
         modifier = modifier,
         navController = navHostController,
-        startDestination = NavigationGraphs.AuthGraph
+        startDestination = NavigationGraphs.ChatGraph
     ) {
         authGraph(navHostController = navHostController)
-
+        chatGraph(navHostController = navHostController)
     }
 }

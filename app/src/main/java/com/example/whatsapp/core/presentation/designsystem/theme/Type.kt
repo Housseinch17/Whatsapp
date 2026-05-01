@@ -7,6 +7,14 @@ import androidx.compose.ui.unit.sp
 
 // Set of Material typography styles to start with
 val Typography = Typography(
+    titleLarge = TextStyle(
+        fontFamily = robotoFamily,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 34.sp,
+        lineHeight = 41.sp,
+        letterSpacing = (-0.4).sp,
+        color = Primary
+    ),
     titleMedium = TextStyle(
         fontFamily = robotoFamily,
         fontWeight = FontWeight.SemiBold,
@@ -22,6 +30,14 @@ val Typography = Typography(
         lineHeight = 24.sp,
         letterSpacing = (-0.4).sp,
         color = Secondary
+    ),
+    labelSmall = TextStyle(
+        fontFamily = robotoFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+        lineHeight = 18.sp,
+        letterSpacing = (-0.4).sp,
+        color = Gray
     ),
     bodySmall = TextStyle(
         fontFamily = robotoFamily,

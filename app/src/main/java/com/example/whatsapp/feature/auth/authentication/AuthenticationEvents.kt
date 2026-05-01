@@ -1,4 +1,4 @@
-package com.example.whatsapp.feature.authentication
+package com.example.whatsapp.feature.auth.authentication
 
 sealed interface AuthenticationEvents {
     data object NavigateToChats: AuthenticationEvents

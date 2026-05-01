@@ -6,4 +6,7 @@ import kotlinx.serialization.Serializable
 sealed interface NavigationGraphs {
     @Serializable
     data object AuthGraph: NavigationGraphs
+
+    @Serializable
+    data object ChatGraph: NavigationGraphs
 }
